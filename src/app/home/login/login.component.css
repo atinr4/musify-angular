@@ -1,7 +1,7 @@
 .App {
     text-align: center;
-  }
-  
+}
+
 .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -16,7 +16,8 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-  }
+}
+
 .spotify-btn {
     background-color: #1dd65f;
     border-radius: 6vmin;
@@ -26,49 +27,50 @@
     padding: 0.7em 1.5em;
     transition: all 0.25s ease;
     text-decoration: none !important;
-  }
-  
-  .spotify-btn span {
+}
+
+.spotify-btn span {
     padding-right: 10px;
     position: relative;
     top: 0px;
-  }
+}
 
-  * {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  
-  html, body {
-    height: 100%;
-  }
-  
-  .hidden {
-    display: none;
-  }
+}
 
-  @media only screen and (max-width: 600px) {
+html,
+body {
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
     .spotify-btn {
-      background-color: #1dd65f;
-      border-radius: 6vmin;
-      color: #fff;
-      cursor: pointer;
-      font-size: 16px;
-      padding: 0.7em 1.5em;
-      font-weight: 600;
-      transition: all 0.25s ease;
-      text-decoration: none !important;
-      position: absolute;
-      bottom: 25vmin;
-      width: 65%;
+        background-color: #1dd65f;
+        border-radius: 6vmin;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 0.7em 1.5em;
+        font-weight: 600;
+        transition: all 0.25s ease;
+        text-decoration: none !important;
+        position: absolute;
+        bottom: 25vmin;
+        width: 65%;
     }
-  
+
     .spotify-btn span {
-      padding-right: 10px;
-      position: absolute;
-      left: 11px;
-      font-size: 26px;
-      top: 0px;
+        padding-right: 10px;
+        position: absolute;
+        left: 11px;
+        font-size: 26px;
+        top: 0px;
     }
 }

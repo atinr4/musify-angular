@@ -1,0 +1,125 @@
+p {
+    margin: 0;
+}
+
+.background {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(8em) opacity(0.6);
+    position: absolute;
+  }
+  
+  .main-wrapper {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    z-index: 1;
+  }
+  
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .main-container {
+    flex: 1;
+  }
+  
+  .no-margin {
+    margin: 0px;
+  }
+  
+  .no-margin svg {
+    margin-right: 2px;
+  }
+  
+  .flex-column a {
+    color: #000;
+    font-size: 18px;
+    transition: 0.4s;
+  }
+  
+  .flex-column a:hover {
+    color: white;
+    background-color: #f99c1c;
+    border-radius: 2em;
+  
+  }
+  
+  .category-card .category-button {
+    color: #000;
+    width: 87%;
+    transition: 0.4s;
+    padding: 10px;
+    display: block;
+    position: absolute;
+    top: 111px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.4s;
+  }
+  
+  .category-card .category-button:hover {
+    color: #fff;
+    background-color: #f99c1c;
+    border-radius: 2em;
+  }
+  
+  .category-card .card-title {
+    text-align: center;
+    height: 122px;
+    padding-top: 40px;
+  }
+  
+  .navbar-brand {
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+    padding: 0px;
+  }
+  
+  .custom-loader {
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .CircularProgressbar-path {
+    stroke: #007bff !important;
+  }
+  
+  .list-unstyled .active {
+    color: #000 !important;
+    text-decoration: none !important;
+    background-color: #fff !important;
+  }
+  
+  #playerContainer {
+    text-align: center;
+  }
+  
+  .modal-close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  
+  #react-confirm-alert {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 10000 !important;
+  }

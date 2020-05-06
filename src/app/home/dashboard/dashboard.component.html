@@ -1,1 +1,55 @@
-<p>dashboard works!</p>
+<div class="container-fluid">
+
+    <div class="row justify-content-md-center">
+        <div class="col-lg-2">
+            <div class="list-group list-group-flush">
+                <div class="list-group-item">
+                    <div class="row" *ngIf="user_data">
+                        <div class="col-md-6 col-4">
+                            <img src="{{user_data.profile_image}}" class="rounded-circle" style="height: 110px;">
+                        </div>
+                        <div class="col-md-6 col-8">
+                            <p class="no-margin">{{user_data.name}}</p>
+                            <p class="no-margin">{{user_data.streak}}</p>
+                            <p class="no-margin" style="font-size: 11px;"><b>{{user_data.total_xp}} XP <span
+                                        style="float: right;">Rank:
+                                        {{user_data.level}}</span></b>
+                            </p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                    [ngStyle]="progressStyle">
+                                </div>
+                            </div>
+                            <p class="no-margin" style="color: rgb(202, 17, 17); letter-spacing: 2px;">
+                                <span *ngFor="let i of Arr(user_data.lives).fill(1)">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                        viewBox="0 0 512 512" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center" *ngIf="!user_data">
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="categories">
+                    <app-menu [categories]="categories"></app-menu>
+                </div>
+                <div class="list-group-item">
+                    <span style="color: rgb(187, 187, 187); font-size: 12px;">Musify your Brain</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-4">
+            <app-category [categories]="categories"></app-category>
+        </div>
+    </div>
+
+</div>

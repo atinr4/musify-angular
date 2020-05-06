@@ -1,0 +1,12 @@
+.flex-column a {
+    color: #000;
+    font-size: 18px;
+    transition: 0.4s;
+  }
+  
+  .flex-column a:hover {
+    color: white;
+    background-color: #f99c1c;
+    border-radius: 2em;
+  
+  }

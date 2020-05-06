@@ -1,18 +1,12 @@
-.App-header {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
+.navbar {
+  background-color: #fff;
+}
 
-  .App-logo {
-    height: 30vmin;
-    pointer-events: none;
-  }
-  
-  .navbar {
-    background-color: #fff;
-  }
+.navbar-brand {
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  margin: auto;
+  padding: 0px;
+}
