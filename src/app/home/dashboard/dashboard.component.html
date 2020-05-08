@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
     <div class="row justify-content-md-center">
-        <div class="col-lg-2">
+        <div class="col-lg-2 col-xs-12">
             <div class="list-group list-group-flush">
                 <div class="list-group-item">
                     <div class="row" *ngIf="user_data">
@@ -47,8 +47,30 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-4">
+        <div class="col-md-6 col-xs-12" *ngIf="categories">
             <app-category [categories]="categories"></app-category>
+            <div class="d-flex justify-content-center" *ngIf="!categories">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <div class="row" style="padding: 10px;">
+                <div class="col-lg-5">
+                    <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                            <div class="card-title h5">Progression</div>
+                            <circle-progress [percent]="progress" [radius]="100" [outerStrokeWidth]="10"
+                                [innerStrokeWidth]="10" [outerStrokeColor]="'#4882c2'" [innerStrokeColor]="'#e7e8ea'"
+                                [animation]="true" [animationDuration]="300" [responsive]=true
+                                [subtitle]="formatSubtitle(progress)"></circle-progress>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-7">
+                    <app-leaderboard></app-leaderboard>
+                </div>
+            </div>
         </div>
     </div>
 

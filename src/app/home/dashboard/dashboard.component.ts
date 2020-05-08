@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { hash } from '../../hash/hash';
 import { ApiService } from '../../api.service';
-import { MenuComponent } from '../menu/menu.component';
-
+import { CircleProgressComponent, CircleProgressOptions } from 'ng-circle-progress';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
+  providers: [CircleProgressComponent, CircleProgressOptions]
 })
 
 export class DashboardComponent implements OnInit {
@@ -23,6 +23,9 @@ export class DashboardComponent implements OnInit {
   Arr = Array;
 
   ngOnInit(): void {
+    //Remove hash
+    window.location.hash = "";
+
     let _token = hash.access_token;
 
     if (_token != undefined)
@@ -35,15 +38,27 @@ export class DashboardComponent implements OnInit {
 
         this.progress = ((data['total_xp'] - ((data['level'] * 1000) - 1000)) * 100) / ((data['level'] * 1000) - data['total_xp']);
         this.progressStyle = {
-          'width': this.progress + '%' 
+          'width': this.progress + '%'
         };
       }
     });
 
     this.apiService.getCategories(localStorage.getItem('_token')).subscribe((data) => {
-        this.categories = data;
+      this.categories = data;
     })
 
+  }
+
+  formatSubtitle = (percent: number) => {
+    if (percent >= 100) {
+      return "Congratulations!"
+    } else if (percent >= 50) {
+      return "Half"
+    } else if (percent > 0) {
+      return "Just began"
+    } else {
+      return "Not started"
+    }
   }
 
 }

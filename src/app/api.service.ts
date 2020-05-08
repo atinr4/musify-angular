@@ -16,4 +16,8 @@ export class ApiService {
   public getCategories(token) {
     return this.httpClient.get(`${environment.apiBaseUrl}/spotify-categories?access_token=${token}`);
   }
+
+  public getLeaderBoard() {
+    return this.httpClient.get(`${environment.apiBaseUrl}/leader-board`);
+  }
 }

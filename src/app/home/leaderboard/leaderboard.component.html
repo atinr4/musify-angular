@@ -1,0 +1,26 @@
+<div class="card" style="width: 100%;">
+    <div class="card-body">
+        <div class="card-title h5">Leader Board</div>
+        <div class="d-flex justify-content-center" *ngIf="!leaderBoard">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let leader of leaderBoard; let index = index">
+                        <td>{{index+1}}</td>
+                        <td><img src="../assets/logo.png" class="rounded-circle" style="height: 30px;">
+                        </td>
+                        <td>{{leader.name}}</td>
+                        <td><span class="badge badge-primary">Spotify</span></td>
+                        <td>Level {{leader.level}}</td>
+                        <td>{{leader.total_xp}} XP </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="custom-loader"></div>
+    </div>
+</div>

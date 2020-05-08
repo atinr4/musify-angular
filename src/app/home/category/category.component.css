@@ -1,0 +1,29 @@
+.category-card {
+    height: 180px !important;
+}
+
+.card-title {
+    text-align: center;
+    height: 122px;
+    padding-top: 40px;
+}
+
+.category-card .category-button {
+    color: #000;
+    width: 87%;
+    padding: 10px;
+    display: block;
+    position: absolute;
+    top: 111px;
+    text-align: center;
+    text-decoration: none;
+    transition: .4s;
+    background: #fff;
+    border: none;
+}
+
+.category-card .category-button:hover {
+    color: #fff;
+    background-color: #f99c1c;
+    border-radius: 2em;
+  }
